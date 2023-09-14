@@ -25,12 +25,13 @@ namespace NewsVowel
         public async Task GetWordsWithMostVowels(string? theme, string? partOfNews, string? apiKey)
         {
             string baseUrl = "https://newsapi.org/v2/everything"; //better to put it in another file/config
+            string defaultTheme = "космос";
 
             try
             {
                 if (string.IsNullOrEmpty(theme))
                 {
-                    throw new Exception("Theme can't be empty.");
+                    theme = defaultTheme;
                 }
 
                 if (string.IsNullOrEmpty(partOfNews) || (partOfNews != "title" && partOfNews != "content" && partOfNews != "description"))

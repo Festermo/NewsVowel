@@ -18,7 +18,7 @@
                     continue;
                 }
 
-                Console.WriteLine("What theme are you interested in?");
+                Console.WriteLine("What theme are you interested in? (default - космос)");
                 string? theme = Console.ReadLine()?.ToLower();
 
                 Console.WriteLine("In which part of news do you want me to search in? (title/content/description)");
